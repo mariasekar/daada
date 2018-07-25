@@ -37,13 +37,13 @@
 	task runFinalJar(type: JavaExec) {
 	   classpath = files('build/libs/gdbr_lib-1.0.jar')
 	   classpath += sourceSets.main.runtimeClasspath
-	   main = "org.adroit.andes.core.cli.ParallelDriver"
+	   main = "os.daada.core.cli.ParallelDriver"
 	}
 
 	task testDependentKeyPairTest(type: Test) {
  		classpath = project.sourceSets.test.runtimeClasspath + files("${projectDir}/src/test/data")
  		exclude '**/*.*'
- 		include 'os/daada/andes/core/util/security/**'
+ 		include 'os/daada/core/util/security/**'
  		systemProperty "anonymization.security.keys.public", "publicfolder"
     	systemProperty "anonymization.security.keys.private", "privatefolder"
  	}
@@ -82,8 +82,8 @@
 		manifest {
 			attributes (
 				'Class-Path': configurations.compile.collect { it.getName().contains("bouncycastle") || it.getName().contains("bcprov-jdk15on") ? ('./' + it.getName()) : '' }.join(' '),
-				//'Main-Class': 'org.adroit.andes.core.cli.Driver'
-				'Main-Class': 'org.adroit.andes.core.cli.ParallelDriver'
+				//'Main-Class': 'os.daada.core.cli.Driver'
+				'Main-Class': 'os.daada.core.cli.ParallelDriver'
 			)
 		}
 		doLast {
