@@ -1,37 +1,32 @@
-## Welcome to GitHub Pages
+# DAaDA (Data Anonymization & De-Anoymization)
 
-You can use the [editor on GitHub](https://github.com/mariasekar/gdpr/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+DAaDA is a toolkit to do data anoymization and de-anoymization on your PII fields. The main use cases of DAaDA is listed below,
+  - To maintain complete security on your customer's PII information
+  - You want to maintain the security but needs to do some analyis (Analytical work to build their recommendation engine / to run machine learning jobs /...) based on your cusotmer's PII data.
+  - You want to share your customer's data across borders and wants to adhere to your country's policies like EU GDPR / US Pricvacy act / ...  
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+DAaDA solves all the above problems with the single tool kit without any issues.
 
-### Markdown
+Its a developer friendly library and has below features for them,
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+  - Its a simple library so that you can place it and use it in your existing applications without any other third party libs (Because its fat jar).
+  - Migrate your existing data set with anonymized set with minimal changes (Mostly memory because of encrypted data size, its also based on your selected key size).
+  - You can add any number of PII field implementations and hook it to the tool-kit without any issues.
+  - You can also override existing PII field implementations based on your need.
+  - By default it comes with commandline options to migrate your given CSV files to anonymized one. It runs on parallel threads so faster.
+  
+# Default PII implementations
 
-```markdown
-Syntax highlighted code block
+  - IMEI
+  - IMSI
+  - Name (First name / Last name / Nick name / Sur name / ...)
+  - Email (Social (media) ids)
+  - Data of birth
+  - IP address
+  - IMEI
 
-# Header 1
-## Header 2
-### Header 3
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/mariasekar/gdpr/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+You can also:
+  - Import and save files from GitHub, Dropbox, Google Drive and One Drive
+  - Drag and drop markdown and HTML files into Dillinger
+  - Export documents as Markdown, HTML and PDF
