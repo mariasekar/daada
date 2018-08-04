@@ -14,6 +14,7 @@ Its a developer friendly library and has below features for them,
   - You can add any number of PII field implementations and hook it to the tool-kit without any issues.
   - You can also override existing PII field implementations based on your need.
   - By default it comes with commandline options to migrate your given CSV files to anonymized one. It runs on parallel threads so faster.
+  - You can change algorithms based on your security level. 
   
 # Default PII implementations
 
@@ -25,3 +26,9 @@ Its a developer friendly library and has below features for them,
   - IP address
   - IMEI
 
+
+### Key Features
+  - Symmetric algorithms based data anonymization (Hashing algorithms like MD5 / SHA / ...)
+  - Asymmetric algorithms based anoymization implemenations ( Public-private key / Certficate based / Digital signature based)
+  - Parall execution of data anonymization and de-anonymization
+  - In-built Caching (When you want to keep the same output for a given value on multiple iterations use this very cautionsly because which works based on key -value pair so keys wont be encrypted at all) for both anonymization and de-anonymization operations.
